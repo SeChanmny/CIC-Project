@@ -9,6 +9,7 @@ class Git extends StatelessWidget {
       width: 100,
       height: 100,
       color: Colors.red,
+      child: const Text('data'),
     );
   }
 }
