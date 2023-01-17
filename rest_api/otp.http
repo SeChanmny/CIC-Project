@@ -1,0 +1,82 @@
+@baseUrl= https://cicstaging.z1central.com/api/
+
+@token= eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjRlMmYyM2QzZDcyOTRhYjY0MTczMTZlMzgzN2U1NDY1YmI4YjQwMWFjOWI3MmE2NDYwMGE2OTI1NjY1NTI2NjI0OTk2ZTQxZWVjZGJkNGMiLCJpYXQiOjE2NzIwNDE3NjkuNDE4NDY4LCJuYmYiOjE2NzIwNDE3NjkuNDE4NDcyLCJleHAiOjE3MDM1Nzc3NjkuNDA4MTE0LCJzdWIiOiIxMCIsInNjb3BlcyI6WyIqIl19.OgRBdsT84gwnUMyL_PKhwDFpNRzRHSk-8G6plQuhSmeo-SOpVvWqXE3CHGGZRp0PkHc1Gcp64wW1kOdSqMKGlnwUQ6a0cZbRjNOaOyjoeU3TlWCTDNyBbz4Qf_ugIw6Ana7Xxf6xTdrCnIZyWkNmmUajdYChkkmGrtmIHBJtIiQSFPdd_QW_M5JzK5QBCPyisGLEpd7v4NcdaLdpdqzzCnh2QJlZaEmG_PtkgOruw6UGWAegA88d2CSD1lEJoPWJjk3bCgSMKnObgIRA_N6o6pYmuluWaVtvu0xdeKROPusZGvc4NMBdfBNzdFsMYtg1GWg8rDoyNb04EWJSYmIyfPE4GpOtkoi7mq7AlK2pcRVCNfnFYbJfvL-FftOhsPp_QkVOe8GPwc1ep-8WosOL9FsGhPla1_a0Yxh1N66Nz9Sw8Lf8iCivprTPzYjlNOLWklY8-1SZy_T2K9zJRgpdL5h_UDeQyqo3K3-mkkJkLS31JGfpxatEQOPN1wNf0JmRZVF2uzGNlNwIiyzPjwr_i7QQj3zSmZj-MeMgwPJ3cnxXzrl5-ZHQdKTgy6lUbBqWXJ-KG29w5cn4dLUn5kRPwL8oFz0XrdjL6olYxouK9Kr16W85cls_k3qGGK9vt-dVmTbi3twFgTpIJUXfD8d30-uSLt0OHxBr1KLp93dKXN0
+
+###
+POST {{baseUrl}}login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "phone" : "+85510305096",
+    "password" : "Admin@2022"   
+}
+
+###
+POST {{baseUrl}}request-otp
+Accept: application/json
+Content-Type: application/json
+
+{
+    "phone" : "069722942"
+}
+
+###
+POST {{baseUrl}}v3/member-profile/update
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "phone" : "+85510305096",
+    "password" : "Admin@2022"   
+}
+
+
+###
+GET {{baseUrl}}v4/service/qm?partial=menu
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+###
+GET {{baseUrl}}v4/service/qm?partial=menu
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{baseUrl}}v4/member?&page=1&hide_me=0&fillters={"company":[21]}
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{baseUrl}}v4/member
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{baseUrl}}v4/member
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{baseUrl}}v4/user?id=1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+###
+GET {{baseUrl}}v4/fetch-option-by-type?type=company
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+###
+GET {{baseUrl}}v4/option/search?type=company&&search=aaa
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+
+
